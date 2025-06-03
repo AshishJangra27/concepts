@@ -10,19 +10,7 @@ The modern data stack is a combination of technologies that allow businesses to 
 
 ---
 
-## 🔁 Modern Data Stack Flow
-
-```mermaid
-flowchart LR
-    A[Data Sources<br/>(APIs, Databases, Logs)] --> B[Ingestion<br/>(ETL / ELT Tools)]
-    B --> C[Storage<br/>(Data Lake / Data Warehouse)]
-    C --> D[Transformation<br/>(dbt, SQL)]
-    D --> E[Consumption<br/>(BI Tools, ML Models, Apps)]
-```
-
----
-
-## 🗄️ Storage Systems
+## 🗄️ 1. Storage Systems
 
 | 🏷 Term         | 📖 Description                                                                                                                                 | 🔧 Tools/Examples                                      |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -33,7 +21,7 @@ flowchart LR
 
 ---
 
-## 🔁 Data Processing
+## 🔁 2. Data Processing
 
 | 🏷 Term         | 📖 Description                                                                                                                                 | 🔧 Tools/Examples                                      |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
@@ -45,7 +33,7 @@ flowchart LR
 
 ---
 
-## 🧠 Data Modeling
+## 🧠 3. Data Modeling
 
 | 🏷 Term            | 📖 Description                                                                                                                              | 🔧 Tools/Examples                         |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
@@ -57,7 +45,7 @@ flowchart LR
 
 ---
 
-## 📊 Analysis & Consumption
+## 📊 4. Analysis & Consumption
 
 | 🏷 Term            | 📖 Description                                                                                                                       | 🔧 Tools/Examples                                 |
 |-------------------|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
@@ -76,4 +64,4 @@ Feel free to contribute or reference it in your own projects.
 
 ---
 
-### 👨‍💻 Created by [Ashish Jangra](https://github.com/yourusername) — Data Science Mentor & Creator
+### 👨‍💻 Created by [Ashish Jangra](https://github.com/ashishjangra27) — Data Science Mentor & Creator
