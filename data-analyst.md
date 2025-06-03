@@ -1,11 +1,11 @@
-# 👨‍💻 What Should a Fresher Data Analyst Know?
+# What Should a Fresher Data Analyst Know?
 
 A beginner-friendly guide to help new Data Analysts get started with the essential tools, skills, and concepts in the data world.  
 Whether you're preparing for your first role or building a portfolio, this checklist gives you a clear roadmap.
 
 ---
 
-## 🎯 Introduction
+## Introduction
 
 Data Analysts play a critical role in converting raw data into meaningful insights.  
 As a fresher, your goal is to be comfortable with tools like SQL, Excel, Python, and BI platforms — while also understanding how data is collected, cleaned, and analyzed.
