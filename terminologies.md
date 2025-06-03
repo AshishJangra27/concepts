@@ -1,67 +1,78 @@
-# 🚀 Modern Data Terminologies & Architecture Cheat Sheet
+# Modern Data Terminologies & Architecture Cheat Sheet
 
-A complete guide to understanding key terms, tools, and flows in modern data engineering. Whether you're a data analyst, engineer, scientist, or student — this repo simplifies the complex world of data systems.
-
----
-
-## 📘 Introduction
-
-The modern data stack is a combination of technologies that allow businesses to ingest, store, transform, and analyze data efficiently. This cheat sheet covers key terminologies and toolsets that form the foundation of any scalable data architecture.
+A complete and beginner-friendly guide to understand key terms, tools, and workflows in modern data engineering.  
+Whether you're a data analyst, engineer, scientist, or student – this cheat sheet simplifies the complex world of data systems.
 
 ---
 
-## 🗄️ 1. Storage Systems
+## Introduction
 
-| 🏷 Term         | 📖 Description                                                                                                                                 | 🔧 Tools/Examples                                      |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| **Database**    | Stores structured data in rows & columns. Optimized for real-time transactions like CRUD operations.                                            | PostgreSQL, MySQL, MongoDB, Oracle DB                  |
-| **Data Warehouse** | Stores structured, historical data for analytical queries. Uses columnar storage and optimized for OLAP workloads.                        | Snowflake, BigQuery, Redshift, Azure Synapse           |
-| **Data Lake**   | Stores raw data (structured, semi-structured, and unstructured). Ideal for logs, backups, media, and machine learning inputs.                 | AWS S3, Azure Data Lake, Google Cloud Storage, HDFS    |
-| **Lakehouse**   | Combines flexibility of Data Lakes with the structure & performance of Warehouses. Enables ACID compliance and analytics on the same layer.   | Databricks, Delta Lake, Apache Iceberg                 |
+The modern data stack is a collection of tools and technologies used to collect, store, process, and analyze data efficiently.  
+This guide explains the core concepts and tools used in scalable data architecture.
 
 ---
 
-## 🔁 2. Data Processing
+## 1. Storage Systems
 
-| 🏷 Term         | 📖 Description                                                                                                                                 | 🔧 Tools/Examples                                      |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
-| **ETL**         | Extract → Transform → Load. Clean and reshape data before loading it into the warehouse.                                                       | Apache Airflow, Talend, Informatica, Python scripts    |
-| **ELT**         | Extract → Load → Transform. Load raw data first, then use SQL inside the warehouse to transform.                                               | dbt, BigQuery SQL, Snowflake SQL                      |
-| **CDC**         | Change Data Capture. Tracks changes in source DBs (inserts, updates, deletes) and syncs them to the target system in real time.                | Debezium, Fivetran, StreamSets                         |
-| **Streaming**   | Real-time data ingestion and processing for logs, sensors, events, etc.                                                                        | Apache Kafka, Apache Flink, AWS Kinesis                |
-| **Batch Processing** | Scheduled execution of jobs. Common for daily reports, aggregations, and backups.                                                     | Airflow, dbt, Apache NiFi                              |
+**Where and how data is stored before it's processed or analyzed.**
 
----
-
-## 🧠 3. Data Modeling
-
-| 🏷 Term            | 📖 Description                                                                                                                              | 🔧 Tools/Examples                         |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------|
-| **Star Schema**     | A central fact table connected to multiple dimension tables. Flat and optimized for BI tools.                                             | Snowflake, Redshift, Power BI            |
-| **Snowflake Schema**| A normalized variant of the star schema that saves space but increases query complexity.                                                  | Traditional data warehouses              |
-| **Fact Table**      | Stores quantitative metrics (e.g., revenue, clicks) linked to business activities.                                                       | Used across all data marts               |
-| **Dimension Table** | Describes business entities (e.g., customers, products). Adds context to the facts.                                                      | Used in BI and analytics modeling        |
-| **Data Mart**       | A subject-focused part of the data warehouse used by individual departments (e.g., marketing, sales).                                     | Built with dbt, SQL transformations      |
+| Term             | Description                                                                                          | Tools/Examples                                       |
+|------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| Database         | Stores structured data in tables (rows and columns). Used for real-time operations like insert, update, delete. | PostgreSQL, MySQL, MongoDB, Oracle DB               |
+| Data Warehouse   | Stores large amounts of structured data, mainly for analysis. Optimized for complex queries and reports. | Snowflake, BigQuery, Redshift, Azure Synapse       |
+| Data Lake        | Stores raw data of all types (structured, semi-structured, unstructured). Used for backups, ML, and logs. | AWS S3, Azure Data Lake, Google Cloud Storage, HDFS |
+| Lakehouse        | Combines data lake flexibility with warehouse performance. Supports analytics and transactions.       | Databricks, Delta Lake, Apache Iceberg              |
 
 ---
 
-## 📊 4. Analysis & Consumption
+## 2. Data Processing
 
-| 🏷 Term            | 📖 Description                                                                                                                       | 🔧 Tools/Examples                                 |
-|-------------------|----------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| **BI Tools**        | Visualize KPIs, trends, and reports with dashboards accessible to business stakeholders.                                            | Tableau, Power BI, Looker, Superset              |
-| **Data Exploration**| Ad hoc querying and profiling done by analysts or scientists. Often used to uncover insights or anomalies.                          | Jupyter, DBeaver, Hex, Mode                       |
-| **Semantic Layer**  | Translates raw SQL into business-friendly logic for self-service analytics.                                                        | LookML (Looker), Cube.js                          |
-| **OLTP**            | Handles real-time transactional workloads like bookings, payments, and updates.                                                    | MySQL, PostgreSQL, SQL Server                    |
-| **OLAP**            | Designed for slicing/dicing historical data with fast aggregations and filtering.                                                  | Snowflake, BigQuery, ClickHouse                  |
+**How data moves, changes, and gets ready for analysis.**
 
----
-
-## 📎 License
-
-This cheat sheet is open-source and maintained for educational use.  
-Feel free to contribute or reference it in your own projects.
+| Term             | Description                                                                                          | Tools/Examples                                       |
+|------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| ETL              | Extract, Transform, Load – clean and format data before storing it in a warehouse.                  | Apache Airflow, Talend, Informatica, Python scripts  |
+| ELT              | Extract, Load, Transform – load raw data first, then transform it inside the warehouse.             | dbt, BigQuery SQL, Snowflake SQL                     |
+| CDC              | Change Data Capture – tracks changes in databases and updates target systems in real time.          | Debezium, Fivetran, StreamSets                       |
+| Streaming        | Real-time data processing, useful for logs, events, and sensors.                                    | Apache Kafka, Apache Flink, AWS Kinesis              |
+| Batch Processing | Runs data jobs on a schedule (daily, hourly). Used for reports, backups, etc.                       | Airflow, dbt, Apache NiFi                            |
 
 ---
 
-### 👨‍💻 Created by [Ashish Jangra](https://github.com/ashishjangra27) — Data Science Mentor & Creator
+## 3. Data Modeling
+
+**Designing the structure of data for easier access, analysis, and performance.**
+
+| Term             | Description                                                                                          | Tools/Examples                          |
+|------------------|------------------------------------------------------------------------------------------------------|-----------------------------------------|
+| Star Schema      | Simple structure with one central fact table linked to dimension tables. Easy to query.              | Snowflake, Redshift, Power BI           |
+| Snowflake Schema | A more normalized version of star schema. Reduces data size, but queries are more complex.          | Traditional warehouses                  |
+| Fact Table       | Stores numbers and metrics (like sales, clicks) linked to business activities.                      | Used in all data marts                  |
+| Dimension Table  | Stores descriptive info (like customer names, product details). Adds meaning to facts.              | Used in BI and reporting                |
+| Data Mart        | A smaller part of the warehouse focused on one area (like marketing or sales).                      | Built using dbt, SQL                    |
+
+---
+
+## 4. Analysis and Consumption
+
+**Where end-users and analysts interact with the data to generate insights.**
+
+| Term             | Description                                                                                          | Tools/Examples                           |
+|------------------|------------------------------------------------------------------------------------------------------|------------------------------------------|
+| BI Tools         | Used to create dashboards and reports for business users.                                            | Tableau, Power BI, Looker, Superset      |
+| Data Exploration | Ad-hoc analysis done by analysts or scientists to find insights or problems.                        | Jupyter, DBeaver, Hex, Mode              |
+| Semantic Layer   | Converts raw data into user-friendly logic for easier analysis.                                      | LookML, Cube.js                          |
+| OLTP             | Handles real-time transactions like bookings and payments.                                           | MySQL, PostgreSQL, SQL Server            |
+| OLAP             | Handles analytical queries on historical data with fast aggregations.                               | Snowflake, BigQuery, ClickHouse          |
+
+---
+
+## License
+
+This cheat sheet is open for educational use.  
+Feel free to contribute or use it in your own learning or projects.
+
+---
+
+### Created by Ashish Jangra — Data Science Mentor & Content Creator  
+[GitHub: ashishjangra27](https://github.com/ashishjangra27)
